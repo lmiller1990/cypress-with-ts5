@@ -6,12 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-		"cy:open": "cypress open --e2e",
+    "cy:open": "cypress open --e2e",
     "preview": "vite preview"
   },
   "devDependencies": {
-		"cypress": "^12.8.1",
-    "typescript": "^5.0.2",
+    "cypress": "^12.8.1",
+    "typescript": "^5.0.4",
     "vite": "^4.2.1"
+  },
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^5.17.0",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "webpack": "^5.80.0"
   }
 }

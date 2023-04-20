@@ -1,9 +1,13 @@
 import { defineConfig } from "cypress";
+import webpackPreprocessor from '@cypress/webpack-preprocessor'
+import wp from './webpack.config.js'
 
 export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      on('file:preprocessor', webpackPreprocessor({
+        webpackOptions: wp
+      }))
     },
   },
-});
+})
